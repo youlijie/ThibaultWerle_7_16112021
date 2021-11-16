@@ -1,0 +1,112 @@
+* {
+  font-family: Lato;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 17px;
+
+  img {
+    width: 268px;
+    height: 93px;
+  }
+}
+
+form {
+  position: relative;
+  input[type="text"] {
+    width: 100%;
+    height: 69px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: black;
+    background-color: #e7e7e7;
+    margin-bottom: 15px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #b3b3b3;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 29%;
+    right: 3%;
+    font-size: 18px;
+    color: black;
+  }
+}
+
+#dropdown1 {
+  button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 15px;
+
+    &:focus {
+      width: 223px;
+      outline: none;
+      border: none;
+    }
+  }
+
+  li a {
+    color: white;
+  }
+}
+#dropdown2 {
+  button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 15px;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  li a {
+    color: white;
+  }
+}
+#dropdown3 {
+  button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 15px;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  li a {
+    color: white;
+  }
+}

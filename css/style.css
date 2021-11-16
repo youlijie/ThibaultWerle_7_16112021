@@ -1,0 +1,125 @@
+* {
+  font-family: Lato;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 17px;
+}
+
+.logo img {
+  width: 268px;
+  height: 93px;
+}
+
+form {
+  position: relative;
+}
+
+form input[type="text"] {
+  width: 100%;
+  height: 69px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
+  background-color: #e7e7e7;
+  margin-bottom: 15px;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+form input[type="text"]::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+
+form input[type="text"]:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
+form input[type="text"]::-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
+form input[type="text"]::placeholder {
+  color: #b3b3b3;
+}
+
+form i {
+  position: absolute;
+  top: 29%;
+  right: 3%;
+  font-size: 18px;
+  color: black;
+}
+
+#dropdown1 button {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 23px 15px;
+}
+
+#dropdown1 button:focus {
+  width: 223px;
+  outline: none;
+  border: none;
+}
+
+#dropdown1 li a {
+  color: white;
+}
+
+#dropdown2 button {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 23px 15px;
+}
+
+#dropdown2 button:focus {
+  outline: none;
+  border: none;
+}
+
+#dropdown2 li a {
+  color: white;
+}
+
+#dropdown3 button {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 23px 15px;
+}
+
+#dropdown3 button:focus {
+  outline: none;
+  border: none;
+}
+
+#dropdown3 li a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
