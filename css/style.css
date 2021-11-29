@@ -59,6 +59,19 @@ form i {
   color: black;
 }
 
+button {
+  width: 170px;
+  margin-right: 20px;
+}
+
+.add-ingredients {
+  display: none;
+}
+
+.add-ingredients option {
+  display: none;
+}
+
 #dropdown1 button {
   outline: none;
   border: none;
@@ -72,23 +85,29 @@ form i {
   background-color: #3282f7;
 }
 
-#dropdown1 button:focus, #dropdown1 button:active, #dropdown1 button:hover {
+#dropdown1 button:focus, #dropdown1 button:active {
   width: 223px;
   outline: none;
   border-bottom: none;
 }
 
-#dropdown1 li a {
+#dropdown1 li {
   color: white;
 }
 
-#dropdown1 ul {
+#dropdown1 ul:focus, #dropdown1 ul:active, #dropdown1 ul:hover {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: ". . .";
   -webkit-transform: translate3d(-0.5px, 66px, 0px) !important;
           transform: translate3d(-0.5px, 66px, 0px) !important;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  background-color: #3282F7;
+  background-color: #3282f7;
+  width: auto;
 }
 
 #dropdown2 button {
@@ -101,7 +120,7 @@ form i {
   font-size: 18px;
   line-height: 22px;
   padding: 23px 15px;
-  background-color: #68D9A4;
+  background-color: #68d9a4;
 }
 
 #dropdown2 button:focus, #dropdown2 button:active, #dropdown2 button:hover {
@@ -120,7 +139,7 @@ form i {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  background-color: #68D9A4;
+  background-color: #68d9a4;
 }
 
 #dropdown3 button {
@@ -133,7 +152,7 @@ form i {
   font-size: 18px;
   line-height: 22px;
   padding: 23px 15px;
-  background-color: #ED6454;
+  background-color: #ed6454;
 }
 
 #dropdown3 button:focus, #dropdown3 button:active, #dropdown3 button:hover {
@@ -152,7 +171,7 @@ form i {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  background-color: #ED6454;
+  background-color: #ed6454;
 }
 
 .card {
@@ -165,21 +184,61 @@ form i {
 }
 
 .card img {
-  background-color: #C7BEBE;
+  background-color: #c7bebe;
   width: 100%;
-  color: #C7BEBE;
+  color: #c7bebe;
   width: 100%;
   height: 178px;
 }
 
 .card .card-body {
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   border: none;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0;
   margin: 0;
+  height: 180px;
+}
+
+.card .card-body-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card .card-body-top .card-title {
+  margin-left: 20px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.card .card-body-top .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+}
+
+.card .card-body-top .clock i {
+  padding-top: 5px;
+}
+
+.card .card-body-top h5 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .recipes {
@@ -187,13 +246,65 @@ form i {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 20px;
       grid-template-areas: ". . .";
+  justify-items: center;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.recipes .recipe-item {
+  width: 72%;
+}
+
+.recipe-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  justify-items: stretch;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #e7e7e7;
+}
+
+.recipe-item__info .ingredients {
+  width: 50%;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 20px;
+}
+
+.recipe-item__info .ingredients .bold-ingredient {
+  font-weight: 700;
+}
+
+.recipe-item__info .description {
+  width: 50%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.recipe-item__info .ustensils {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
