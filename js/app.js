@@ -18,9 +18,6 @@ for (let i = 0; i < recipes.length; i++) {
 // log the new array
 console.log(recipesArray);
 
-
-
-
 // separete recipe by id
 const recipeById = {};
 for (let i = 0; i < recipesArray.length; i++) {
@@ -70,10 +67,10 @@ for (let i = 0; i < recipesArray.length; i++) {
   }
 }
 
-
-
 // add ingredients to the DOM for each recipes (ingredient, quantity, unit)
-const ingredients = document.querySelectorAll(".recipe-item__info-item.ingredients");
+const ingredients = document.querySelectorAll(
+  ".recipe-item__info-item.ingredients"
+);
 for (let i = 0; i < ingredients.length; i++) {
   const ingredient = ingredients[i];
   const recipe = recipesArray[i];
@@ -85,8 +82,8 @@ for (let i = 0; i < ingredients.length; i++) {
     }
     if (recipeIngredient.quantity === undefined) {
       recipeIngredient.quantity = " ";
-    } else // add ":" before quantity
-    {
+    } // add ":" before quantity
+    else {
       recipeIngredient.quantity = ": " + recipeIngredient.quantity;
     }
     ingredient.innerHTML += `
@@ -100,7 +97,7 @@ for (let i = 0; i < ingredients.length; i++) {
     //add ingredient only 1 time to the first dropdown
     if (j === 0) {
       const dropdown = document.querySelector(".add-ingredients");
-      const option = document.createElement("li");
+      const option = document.createElement("button");
       option.value = recipeIngredient.ingredient;
       option.textContent = recipeIngredient.ingredient;
       dropdown.appendChild(option);
@@ -113,25 +110,8 @@ for (let i = 0; i < ingredients.length; i++) {
       dropdown.addEventListener("click", () => {
         option.style.display = "block";
       });
-
-      // when an ingredient is selected, display only the recipe that contains the ingredient
-      option.addEventListener("click", () => {
-        const recipesContainingIngredient = document.querySelectorAll(".recipe-item");
-        for (let k = 0; k < recipesContainingIngredient.length; k++) {
-          const recipeContainingIngredient = recipesContainingIngredient[k];
-          const ingredients = recipeContainingIngredient.querySelectorAll(".recipe-item__info-item-ingredient");
-          for (let l = 0; l < ingredients.length; l++) {
-            const ingredient = ingredients[l];
-            if (ingredient.textContent.includes(option.textContent)) {
-              recipeContainingIngredient.style.display = "block";
-            } else {
-              recipeContainingIngredient.style.display = "none";
-            }
-          }
-        }
-      });
     }
-
+  }
 }
 
 // use text search to filter recipes by using everythings in the recipe
@@ -140,11 +120,24 @@ search.addEventListener("keyup", (e) => {
   const searchText = e.target.value.toLowerCase();
   const recipes = document.querySelectorAll(".recipe-item");
   recipes.forEach((recipe) => {
-    const recipeName = recipe.querySelector(".card-title").textContent.toLowerCase();
-    const recipeDescription = recipe.querySelector(".description").textContent.toLowerCase();
-    const recipeIngredients = recipe.querySelector(".ingredients").textContent.toLowerCase();
-    const ustensils = recipe.querySelector(".ustensils").textContent.toLowerCase();
-    if (recipeName.includes(searchText) || recipeDescription.includes(searchText) || recipeIngredients.includes(searchText) || ustensils.includes(searchText)) {
+    const recipeName = recipe
+      .querySelector(".card-title")
+      .textContent.toLowerCase();
+    const recipeDescription = recipe
+      .querySelector(".description")
+      .textContent.toLowerCase();
+    const recipeIngredients = recipe
+      .querySelector(".ingredients")
+      .textContent.toLowerCase();
+    const ustensils = recipe
+      .querySelector(".ustensils")
+      .textContent.toLowerCase();
+    if (
+      recipeName.includes(searchText) ||
+      recipeDescription.includes(searchText) ||
+      recipeIngredients.includes(searchText) ||
+      ustensils.includes(searchText)
+    ) {
       recipe.style.display = "block";
     } else {
       recipe.style.display = "none";
@@ -155,4 +148,5 @@ search.addEventListener("keyup", (e) => {
     }
   });
 });
-}
+
+// filter recipes
