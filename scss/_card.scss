@@ -1,0 +1,111 @@
+
+// les cartes de recettes
+.icone{
+    position:absolute;
+    font-size: 32px;
+    top:30px;
+    right: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+
+.recettes__card{
+display: grid;
+grid-template-columns: repeat(3,3fr);
+margin-top: 50px;
+margin-left: 100px;
+margin-right: 100px;
+
+}
+
+.img{
+background: #C7BEBE;
+width: 380px;
+height: 178px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+box-shadow: 5px 3px 7px 2px rgba(0,0,0,0.46);
+}
+
+.recette__complete{
+width: 380px;
+height:194px;
+overflow: hidden;
+//white-space: nowrap;
+//text-overflow: ellipsis;
+margin-right: 50px;
+margin-bottom: 50px;
+padding-right: 10px;
+background: #E7E7E7;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+box-shadow: 5px 3px 7px 2px rgba(0,0,0,0.46);
+}
+
+
+.infos_principale{
+display: flex;
+justify-content: space-between;
+padding-top:20px;
+font-family: 'Lato';
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px;
+color: #000000;
+}
+
+.title__recette{
+margin-left: 20px;
+}
+
+.time{
+margin-right: 20px;
+}
+
+.fa-clock{
+font-size: 20px;
+margin-right: 5px;
+}
+
+.contenu{
+margin-top: 20px;
+display: flex;
+//justify-content: space-between;
+//flex-wrap: nowrap;
+overflow: hidden;
+}
+
+.ingredient{
+ //overflow: hidden;
+ //white-space: nowrap;
+
+
+    li{
+        //white-space: nowrap;
+        //text-overflow: ellipsis;
+//margin-left: 20px;
+//margin-right: 20px;
+margin-bottom: 2px;
+font-family: 'Lato';
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: 8px;
+color:black;
+
+    }
+
+}
+
+.recettes{
+//text-overflow: ellipsis;
+//margin-right: 20px;
+font-family: 'Roboto';
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 12px;
+}
+

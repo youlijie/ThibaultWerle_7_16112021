@@ -1,116 +1,61 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/style.css" />    
+    <script src="https://kit.fontawesome.com/7f92873cce.js" crossorigin="anonymous"></script>
     <title>Les petits plats</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="/logo.png" alt="Les petits plats" />
-      </div>
-      <nav>
-        <form action="/search.php" method="get" class="container-fluid col-10">
-          <input
-            type="text"
-            name="search"
-            placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
-            class="justify-content-center search"
-          />
-          <i class="fas fa-search fa-lg"></i>
-        </form>
-        <div class="container-fluid">
-          <div class="row gap-4">
-            <div class="col-1 offset-1 mr-2">
-              <div class="tag">
-                <span class="label-tag"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row gap-4">
-            <div class="col-1 offset-1 mr-2">
-              <div class="btn-group" id="dropdown1">
-                <button
-                  type="button"
-                  class="btn btn-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Ingredients
-                </button>
-                <ul class="dropdown-menu add-ingredients">
-                </ul>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="btn-group" id="dropdown2">
-                <button
-                  type="button"
-                  class="btn btn-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Appareil
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="btn-group" id="dropdown3">
-                <button
-                  type="button"
-                  class="btn btn-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Ustensiles
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="recipes"></div>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/app.js" type="module"></script>
-    <script src="/js/recipes.js" type="module"></script>
-  </body>
+</head>
+<body>
+    
+    <header class='header'>
+<img src="img/logo.svg" alt="">
+<p class='title'>Les petits plats</p>
+
+</header>
+
+<div class='bar__search'>
+    <span class='icone'><i class="fas fa-search"></i></span>
+<input type="search" name="search" id="search" placeholder="Rechercher un ingédient, appareil, ustensiles ou une recette">
+</div>
+ 
+ <div class='tags'></div> 
+ 
+
+  <div class="dropdown" id='drop1'>
+   <input type="text" placeholder="Ingrédients" id="input_ingredients">
+      <i id='btn_ingredients' class="fas fa-chevron-down"></i>
+      
+  <div id="drop_ingredients" class="dropdown-content-ingredients"></div>
+  </div>
+
+  <div class="dropdown">
+    <input type="text" placeholder="Appareils" id="input_appareils">
+       <i id='btn_appareils' class="fas fa-chevron-down"></i>
+       
+       <div id="drop_appareils" class="dropdown-content-appareils">
+
+     </div>
+   </div>
+
+   <div class="dropdown">
+    <input type="text" placeholder="Ustensiles" id="input_ustensiles">
+       <i id='btn_ustensiles' class="fas fa-chevron-down"></i>
+       
+       <div id="drop_ustensiles" class="dropdown-content-ustensiles">
+       
+     </div>
+   </div>
+
+<main class='recettes__card'></main>
+
+   
+   <script type='module' src="script/index.js"></script>
+    <script type='module' src="script/dropdown.js"></script>
+</body>
 </html>

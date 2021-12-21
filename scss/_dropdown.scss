@@ -1,0 +1,216 @@
+
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3282F7
+  }
+  
+  /* The search field */
+  #input_ingredients {
+      display: block;
+    height: 69px;
+    width: 100%;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    background-color:#3282F7 ;
+    font-size: 16px;
+    padding: 14px 50px 12px 10px;
+    color:#f1f1f1;
+    border-radius: 5px;
+    border-bottom: 1px solid #ddd;
+    &::placeholder{
+        color:white;
+     
+    }
+  }
+  
+  #input_appareils {
+    display: block;
+  height: 69px;
+  width: 100%;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  background-color:#68D9A4;
+  color:#f1f1f1;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 14px 50px 12px 10px;
+border-bottom: 1px solid #ddd;
+  &::placeholder{
+      color:white;
+   
+  }
+}
+
+
+#input_ustensiles {
+  display: block;
+  height: 69px;
+  width: 100%;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  background-color: #ED6454;
+  font-size: 16px;
+  color:#f1f1f1;
+  padding: 14px 50px 12px 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #ddd;
+  &::placeholder{
+      color:white;
+   
+  }
+}
+
+
+  /* The search field when it gets focus/clicked on */
+  //#myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left:100px;
+    
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content-ingredients {
+display: none;
+position: absolute;
+font-family: Lato;
+margin-bottom: 100px;
+font-size: 18px;
+font-weight: 400;
+line-height: 18px;
+background-color: #3282F7;
+min-width: 230px;
+border: 1px solid #ddd;
+z-index: 1;
+a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  }
+
+  .dropdown-content-appareils {
+    display: none;
+    position: absolute;
+    font-family: Lato;
+    margin-bottom: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: #68D9A4;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    a{
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+}
+      }
+
+
+
+  .dropdown-content-ustensiles {
+    display: none;
+    position: absolute;
+    font-family: Lato;
+    margin-bottom: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    background-color:  #ED6454;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    a{
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+}
+      }
+
+
+ /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu */
+  .show {
+display:grid;
+grid-template-columns: repeat(6,3fr);
+
+
+}
+
+   // chevron
+
+   .fa-chevron-down{
+       position:absolute;
+       right: 30px;
+       top:25px;
+       font-size:20px;
+       color: #f1f1f1;
+       cursor: pointer;
+
+   }
+  
+//    .bi-chevron-up{
+//        display: block;
+//     position:absolute;
+//     right: 5px;
+//     top:15px;
+//     font-size:20px;
+//     color: black;
+//     cursor: pointer;
+//     z-index: 100;
+// }
+
+
+.list{
+display: flex;
+flex-direction: row;
+}
+
+li{
+    font-size: 12px;
+    color:white;
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        color:black;
+    }
+}
+
+
+
+// stylisation des tags
+
+.tags{
+display: flex;
+margin-left: 20px;
+
+}
+
+
+.tags_li{
+  display: flex;
+   justify-content: space-between;
+  height: 30px;
+  width: 150px;
+  margin-right: 20px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+ background-color: #68D9A4;
+}
+
+.bi-x-circle{
+cursor: pointer;
+
+}
