@@ -1,0 +1,69 @@
+@import "mixins.scss";
+@import "dropdown.scss";
+@import "card.scss";
+//@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: "DM sans", sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+strong {
+  font-weight: bolder;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #d04f4f;
+  font-size: 36px;
+  width: 268px;
+}
+
+.search_bar {
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  margin-top:20px;
+  //width: 90%;
+  
+}
+
+#search {
+  display: block;
+  width: 100%;
+  height: 69px;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-family: 18px;
+  background-color: #e7e7e7;
+  border: none;
+  box-shadow: 5px 3px 7px 2px rgba(0, 0, 0, 0.46);
+  &:hover {
+    box-shadow: 5px 3px 7px 2px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.icone {
+  position: absolute;
+  font-size: 28px;
+  top: 15px;
+  right:10px;
+}
+
+// @media screen and (max-width: 1000px) {
+//   #search {
+//     margin-left: 20px;
+//     margin-right: 20px;
+//   }
+//   .icone {
+//     right: 9%;
+//   }
+// }
