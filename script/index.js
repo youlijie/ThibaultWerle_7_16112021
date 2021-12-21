@@ -92,19 +92,19 @@ function search(e) {
 }
 
 // // fonction qui retourne le tableau filtrer recherche principale.
-// export const filtrerTableauCardTrier = function (search, array) {
-//   const filtrerCard = array.filter((item) => {
-//     const ingredient = item.ingredients.map((x) => x.ingredient);
+export const filtrerTableauCardTrier = function (search, array) {
+const filtrerCard = array.filter((item) => {
+const ingredient = item.ingredients.map((x) => x.ingredient);
    
-//     return (
-//       item.name.toLowerCase().includes(search) ||
-//       item.description.includes(search) ||
-//       ingredient.toString().toLowerCase().includes(search)
-//     );
-//   });
+return (
+      item.name.toLowerCase().includes(search) ||
+      item.description.includes(search) ||
+     ingredient.toString().toLowerCase().includes(search)
+    );
+  });
 
-//   return filtrerCard;
-// };
+   return filtrerCard;
+ };
 
 // Au keyup on execute la fonction filtrer card
 const inputP = document.getElementById("search");
@@ -114,66 +114,66 @@ inputP.addEventListener("keyup", search);
 //---------------------------------------------------------------------//
 // permet d'afficher seulement les elements de la liste encore présent dans le tableau filtrer
 // par la recherche principale.
-// const listAppareils = document.querySelectorAll(".list_appareils");
-// const listIngredients = document.querySelectorAll(".list_ingredients");
-// const listUstensiles = document.querySelectorAll(".list_ustensiles");
+const listAppareils = document.querySelectorAll(".list_appareils");
+const listIngredients = document.querySelectorAll(".list_ingredients");
+const listUstensiles = document.querySelectorAll(".list_ustensiles");
 
-// // retournes le tableau trier recherche principale
-// inputP.addEventListener("keyup", function (e) {
-//   let search = e.target.value.toLowerCase();
-//   const cardRestante = filtrerTableauCardTrier(search, recipes);
-//   const appareilRestant = cardRestante.map((item) =>
-//     item.appliance.toLowerCase()
-//   );
-//   const ingredientRestant = cardRestante.map((item) => {
-//     const ingredient = item.ingredients.map((x) => x.ingredient);
-//      for (let val of ingredient) {
-//       const valIngr = val.toLowerCase();
-//       return valIngr;
-//     }
-//   });
-//   const ustensilRestant = cardRestante.map((item) => {
-//     const ustensil = item.ustensils;
-//     for (let valeur of ustensil) {
-//       let valUst = valeur.toLowerCase();
-//       return valUst;
-//     }
-//   });
+// retournes le tableau trier recherche principale
+inputP.addEventListener("keyup", function (e) {
+  let search = e.target.value.toLowerCase();
+  const cardRestante = filtrerTableauCardTrier(search, recipes);
+  const appareilRestant = cardRestante.map((item) =>
+    item.appliance.toLowerCase()
+  );
+  const ingredientRestant = cardRestante.map((item) => {
+    const ingredient = item.ingredients.map((x) => x.ingredient);
+     for (let val of ingredient) {
+      const valIngr = val.toLowerCase();
+      return valIngr;
+    }
+  });
+  const ustensilRestant = cardRestante.map((item) => {
+    const ustensil = item.ustensils;
+    for (let valeur of ustensil) {
+      let valUst = valeur.toLowerCase();
+      return valUst;
+    }
+  });
 
-//   if (search.length > 2) {
-//     // trie dans les appareils
-//     for (let valeur of listAppareils) {
-//      let textValue =
-//         valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
+  if (search.length > 2) {
+    // trie dans les appareils
+    for (let valeur of listAppareils) {
+     let textValue =
+        valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
 
-//       if (appareilRestant.includes(textValue)) {
-//         valeur.style.display = "";
-//       } else {
-//         valeur.style.display = "none";
-//       }
-//     }
-//     // trie dans les ingredients
-//     for (let valeur of listIngredients) {
-//       let textValue =
-//         valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
-//       if (ingredientRestant.includes(textValue)) {
-//         valeur.style.display = "";
-//       } else {
-//         valeur.style.display = "none";
-//       }
-//     }
-//     for (let valeur of listUstensiles) {
-//       let textValue =
-//         valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
-//       if (ustensilRestant.includes(textValue)) {
-//         valeur.style.display = "";
-//       } else {
-//         valeur.style.display = "none";
-//       }
-//     }
-//   } else {
-//     afficherListTrier(listIngredients, search);
-//     afficherListTrier(listUstensiles, search);
-//     afficherListTrier(listAppareils, search);
-//   }
-// });
+      if (appareilRestant.includes(textValue)) {
+        valeur.style.display = "";
+      } else {
+        valeur.style.display = "none";
+      }
+    }
+    // trie dans les ingredients
+    for (let valeur of listIngredients) {
+      let textValue =
+        valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
+      if (ingredientRestant.includes(textValue)) {
+        valeur.style.display = "";
+      } else {
+        valeur.style.display = "none";
+      }
+    }
+    for (let valeur of listUstensiles) {
+      let textValue =
+        valeur.textContent.toLowerCase() || valeur.innerText.toLowerCase();
+      if (ustensilRestant.includes(textValue)) {
+        valeur.style.display = "";
+      } else {
+        valeur.style.display = "none";
+      }
+    }
+  } else {
+    afficherListTrier(listIngredients, search);
+    afficherListTrier(listUstensiles, search);
+    afficherListTrier(listAppareils, search);
+  }
+});
